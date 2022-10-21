@@ -7,19 +7,22 @@ function App() {
   const [pokemon, setPokemon] = useState( {} )
   const [busqueda, setbusqueda] = useState(null)
   
-  // function HandleBlur (e) {
-  //     setbusqueda(e.target.value)
-  //     busqueda && mostrarPokemons(busqueda)
-  //   }
+  function HandleChange () {
+    setbusqueda(document.getElementById('search').value)
+      // busqueda && mostrarPokemons(busqueda)
+      console.log(busqueda)
+  }
 
-  function HandleClick (e) {
-      // setbusqueda(e.target.value)
+
+  function HandleClick () {
       setbusqueda(document.getElementById('search').value)
       busqueda && mostrarPokemons(busqueda)
+      console.log(busqueda)
     }
+
     
 
-  const mostrarPokemons = (nombre='charmander')=>{
+  const mostrarPokemons = (nombre='arcanine')=>{
     let pokemon = nombre.toLowerCase().trim()
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     .then(res => res.json())
@@ -27,7 +30,7 @@ function App() {
       let poke = { 
         id: json.id,
         name: json.name, 
-        avatar_front: json.sprites.front_default,
+        avatar_front: json.sprites.other.dream_world.front_default,
         avatar_back: json.sprites.back_default,
         stats:json.stats,
       }
@@ -38,17 +41,10 @@ function App() {
 
   useEffect(() => {
       mostrarPokemons()
-  }, [busqueda] )
-  
+  }, [] )
+
   // console.log(busqueda)
-  console.log(pokemon)
-  // console.log(Object.entries(pokemon).length)
-
-  // if(Object.entries(pokemon) >1 ) console.log(pokemon)
-
-
-  let array = [1,2,3,4]
-  // console.log(array)
+  // console.log(pokemon)
 
   return (
     <div className="App">
@@ -58,12 +54,11 @@ function App() {
 
           <div className='pokedex-front'>
             <div className='img-container'>
-              <img src={ pokemon.avatar_front} alt={pokemon.name} />
+              <img src={ pokemon.avatar_front || 'https://i.pinimg.com/736x/9d/dd/1f/9ddd1f367e36919648741d77c86e75d0.jpg'} alt={pokemon.name} />
               <input type="text"  placeholder='...Busca un pokemon' autoComplete='off' name='search'  id='search' />
-              <input type="button" value='buscar' onClick={HandleClick} />
+              <input type="button" value='Buscar' onClick={HandleClick} onChange={HandleChange}/>
             </div>
           </div>
-
 
           <div className='pokedex-back'> 
               <table>
@@ -72,18 +67,14 @@ function App() {
                   Object.entries(pokemon).length > 1 && pokemon.stats.map((el, index)=>(
                     <tr key={index}>
                       <th>{el.stat.name}</th>
-                      <td>{el.base_stat}</td>
+                      <td>{el.base_stat || '????'}</td>
                   </tr>
                   ))
                 }
               </tbody>
-
               </table>
-
           </div>
-
         </div>
-
     </div>
   );
 }

@@ -17,11 +17,6 @@ h1{
   min-width: 325px;
   text-align: center;
 }
-
-img{
-  width: 100%;
-  text-align: center;
-}
 .pokedex-front{
   background-image: url('./components/images/pokedex-front.svg') ;
   background-repeat: no-repeat;
@@ -29,6 +24,7 @@ img{
   background-size: contain;
   height: 500px;
   width: 400px;
+  position: relative;
 }
 .img-container{
   width: 265px;
@@ -36,14 +32,15 @@ img{
   margin: auto;
   position: relative;
   top:110px;
-  object-fit: contain;
 }
 .img-container img{
+  object-fit: contain;
   width: 80%;
+  height: 100%;
 }
 input[type="text"]{
   position: relative;
-  top: 100px;
+  top: 90px;
   right: 25px;
   box-sizing: border-box;
   padding: 6px 25px;
@@ -53,15 +50,30 @@ input[type="text"]{
   color: black;
 }
 ::placeholder { color: black; }
+
+input[type='button']{
+  box-sizing:content-box;
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(146, 146, 202);
+  position: relative;
+  left: 120px;
+  cursor: pointer;
+}
+
 .pokedex-back{
   background-image: url('./components/images/pokedex-back.svg') ;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   height: 500px;
-  width: 400px;
   position: relative;
   top: -11px;
+  max-width: 400px;
+  width: 90%;
 }
 table {
   width: 200px;
@@ -93,10 +105,42 @@ td{
 }
 
 
-@media screen and (max-width:765px){ 
-  
+@media screen and (max-width:780px){ 
+
+  h1{
+    margin: 0;
+  }
+  .img-container{
+    max-width: 200px;
+    height: 180px;
+    margin: auto;
+    position: relative;
+    top:140px;
+  }
+  .pokedex-front{
+    top: -20px;
+    width: 300px;
+  }
+  .pokedex-back{
+    top: -110px;
+    width: 300px;
+  }
   .pokedex-container{
     flex-direction: column;
     align-items: center;
+  }
+  .img-container{
+    max-width: 200px;
+    height: 180px;
+    margin: auto;
+    position: relative;
+    top:140px;
+  }
+  input[type='text']{
+    top:70px;
+  }
+  input[type='button']{
+    left: 100px;
+    bottom: 10px;
   }
 }

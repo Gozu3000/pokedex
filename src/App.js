@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import Silueta from './components/images/pokemon-silueta.png'
 
 
 function App() {
 
   const [pokemon, setPokemon] = useState( {} )
   const [busqueda, setbusqueda] = useState(null)
-
+  
   // function HandleBlur (e) {
   //     setbusqueda(e.target.value)
   //     busqueda && mostrarPokemons(busqueda)
@@ -25,7 +24,6 @@ function App() {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     .then(res => res.json())
     .then(json => {
-      console.log(json)
       let poke = { 
         id: json.id,
         name: json.name, 
@@ -35,18 +33,22 @@ function App() {
       }
 
       setPokemon(poke)
-      console.log(poke)
   })} 
   
-  // let stats = typeof pokemon !== null && pokemon.stats.map((el)=>console.log(el.stat.name, el.base_stat))
-  // console.log(stats)
-
 
   useEffect(() => {
       mostrarPokemons()
   }, [busqueda] )
   
-  console.log(busqueda)
+  // console.log(busqueda)
+  console.log(pokemon)
+  // console.log(Object.entries(pokemon).length)
+
+  // if(Object.entries(pokemon) >1 ) console.log(pokemon)
+
+
+  let array = [1,2,3,4]
+  // console.log(array)
 
   return (
     <div className="App">
@@ -64,30 +66,19 @@ function App() {
 
 
           <div className='pokedex-back'> 
-            
-              {/* <table class="default">
-
-                  <tr>
-                    <td>Celda 1</td>
-                    <td>Celda 2</td>
+              <table>
+                <tbody>
+                {
+                  Object.entries(pokemon).length > 1 && pokemon.stats.map((el, index)=>(
+                    <tr key={index}>
+                      <th>{el.stat.name}</th>
+                      <td>{el.base_stat}</td>
                   </tr>
-                  
-                  <tr>
-                    <td>Celda 5</td>
-                    <td>Celda 6</td>
-                  </tr>
+                  ))
+                }
+              </tbody>
 
-                  <tr>
-                    <td>Celda 5</td>
-                    <td>Celda 6</td>
-                  </tr>
-
-                  <tr>
-                    <td>Celda 5</td>
-                    <td>Celda 6</td>
-                  </tr>
-
-              </table> */}
+              </table>
 
           </div>
 

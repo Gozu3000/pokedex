@@ -1,38 +1,73 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  /* background-color: rgb(164, 225, 232); */
+  background-color: #05e61f8a;
+}
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.pokedex-container{
+  display: flex;
+  margin: auto;
+  max-width: 800px;
+  min-width: 325px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+  width: 100%;
+  text-align: center;
+}
+.pokedex-front{
+  background-image: url('./components/images/pokedex-front.svg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 500px;
+  width: 400px;
+}
+.img-container{
+  width: 265px;
+  height: 220px;
+  margin: auto;
+  position: relative;
+  top:110px;
+  object-fit: contain;
+}
+.img-container img{
+  width: 80%;
+}
+input[type="text"]{
+  position: relative;
+  top: 100px;
+  right: 25px;
+  box-sizing: border-box;
+  padding: 6px 25px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: black;
+}
+::placeholder { color: black; }
+.pokedex-back{
+  background-image: url('./components/images/pokedex-back.svg') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 500px;
+  width: 400px;
+  position: relative;
+  top: -11px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width:765px){ 
+  
+  .pokedex-container{
+    flex-direction: column;
+    align-items: center;
   }
 }

@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 381 522" width="381" height="522">
+	<title>pokedex-stats - back</title>
+	<defs>
+		<image  width="368" height="478" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXAAAAHeBAMAAABwIU2SAAAAAXNSR0IB2cksfwAAACdQTFRFAAAAHAEFOwIN3QgvbgQWHgEHDggJKAAEwgYokQYeOwINqwUiHgEH7OFcewAAAA10Uk5T//AA///Q/zD//////7itHUsAAANwSURBVHic7du9SW1RFEXha/IKMDG/FTw4BoIGvuA1cEsQxNwizE1twCYszg50/zHW3DBGBR+TzeIk53Riuzov6nSw3V5vCj/+7QpfNTkOXzU5D180OQ9fNHkBfM3kBfA1k1fAl0xeAV8yeQl8xeQl8BWT18AXTF4DP/7vCr+9bAqfn7wKPj15FXz6sJTBZw9LGXx28jr45OR18MnDUgifOyyF8LnJK+FTk1fCpyYvhc9MXgqfueW18IlbXgufeOXF8PFXXgwfn7waPjx5NXz4sJTDRw9LOXz0ldfDB195PXxw8gD42OQB8LHDkgAfOiwJ8KHJI+Ajk0fARybPgA9MngEfmDwE3j95CLx/8hR49+Qp8O7JY+C9k8fAeyfPgXdOngPv/C4Pgvd9lwfB+yZPgndNngTvOixR8J7DEgXvmTwL3jF5FrzjsITB2w9LGLx98jR48+Rp8ObJ4+Ctk8fBW295HrzxlufBG195ILztlQfC2yZPhDdNnghvOiyR8JbDEglveeWZ8IZXnglvmDwU/vvkofDj8Yd/Qv/cBMN/6u7jZU/4cXxdNoUfz7vCH143hd8/bQo/PneFv+8Kf9sV/lc4nHA64XTC6YTTCacTTiecTjidcDrhdMLphNMJpxNOJ5xOOJ1wOuF0wumE0wmnE04nnE44nXA64XTC6YTTCacTTiecTjidcDrhdMLphNMJpxNOJ5xOOJ1wOuF0wumE0wmnE04nnE44nXA64XTC6YTTCacTTiecTjidcDrhdMLphNMJpxNOJ5xOOJ1wOuF0wumE0wmnE04nnE44nXA64XTC6YTTCacTTiecTjidcDrhdMLphNMJpxNOJ5xOOJ1wOuF0wumE0wmnE04nnE44nXA64XTC6YTTCacTTiecTjidcDrhdMLphNMJpxNOJ5xOOJ1wOuF0wumE0wmnE04nnE44nXA64XTC6YTTCacTTiecTjidcDrhdMLphNMJpxNOJ5xOOJ1wOuF0wumE0wmnE04nnE44nXA64XTC6YTTCacTTiecTjidcDrhdMLphNMJpxNOJ5xOOJ1wOuF0wumE0wmnE04nnE44nXA64XTC6YTTCacTTiecTjidcDrhdMLphNMJpxNOJ5xOOJ1wOuF0wumE0wmnE073tiv8fVf456bw+6dN4Q+vm8Kfz3vCvy7nbzvtR+XG4hwqAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="44"/>
+</svg>

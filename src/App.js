@@ -38,8 +38,8 @@ function App() {
       console.log(poke)
   })} 
   
-  let stats = typeof pokemon !== null && pokemon.stats.map((el)=>console.log(el.stat.name, el.base_stat))
-  console.log(stats)
+  // let stats = typeof pokemon !== null && pokemon.stats.map((el)=>console.log(el.stat.name, el.base_stat))
+  // console.log(stats)
 
 
   useEffect(() => {
@@ -66,13 +66,6 @@ function App() {
           <div className='pokedex-back'> 
             
               {/* <table class="default">
-
-        
-
-
-
-
-
 
                   <tr>
                     <td>Celda 1</td>

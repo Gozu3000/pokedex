@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './normalize.css';
 import './App.css';
 
 

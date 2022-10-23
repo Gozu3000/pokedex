@@ -136,6 +136,9 @@ td{
     position: relative;
     top:140px;
   }
+  td, th{
+    font-size: 15px;
+  }
   input[type='text']{
     top:70px;
   }
